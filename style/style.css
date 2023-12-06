@@ -127,6 +127,121 @@ body {
   right: 2%;
   cursor: pointer;
 }
+.search {
+	display: inline-block;
+	position: relative;
+	height: 35px;
+	width: 35px;
+	box-sizing: border-box;
+	margin: 0px 8px 7px 0px;
+	padding: 7px 9px 0px 9px;
+	border: 3px solid #FFFFFF;
+	border-radius: 25px;
+	transition: all 200ms ease;
+	cursor: text;
+	
+	&:after {
+		content: "";
+		position: absolute;
+		width: 3px;
+		height: 20px;
+		right: -5px;
+		top: 21px;
+		background: #FFFFFF;
+		border-radius: 3px;
+		transform: rotate(-45deg);
+		transition: all 200ms ease;
+	}
+	
+	&.active,
+	&:hover {
+		width: 300px;
+		margin-right: 0px;
+		margin-top: 3px;
+		&:after {
+			height: 0px;	
+		}
+	}
+	
+	input {
+		width: 100%;
+		border: none;
+		box-sizing: border-box;
+		font-family: Helvetica;
+		font-size: 15px;
+		color: inherit;
+		background: transparent;
+		outline-width: 0px;
+	}
+}
+.search2 {
+	display: inline-block;
+	position: relative;
+	height: 35px;
+	width: 35px;
+	box-sizing: border-box;
+	margin: 0px 8px 7px 0px;
+	padding: 7px 9px 0px 9px;
+	border: 3px solid #FFFFFF;
+	border-radius: 25px;
+	transition: all 200ms ease;
+	cursor: text;
+	
+	&:after {
+		content: "";
+		position: absolute;
+		width: 3px;
+		height: 20px;
+		right: -5px;
+		top: 21px;
+		background: #FFFFFF;
+		border-radius: 3px;
+		transform: rotate(-45deg);
+		transition: all 200ms ease;
+	}
+	
+	&.active,
+	&:hover {
+		width: 300px;
+		margin-right: 0px;
+		margin-top: 3px;
+		&:after {
+			height: 0px;	
+		}
+	}
+	
+	input {
+		width: 100%;
+		border: none;
+		box-sizing: border-box;
+		font-family: Helvetica;
+		font-size: 15px;
+		color: inherit;
+		background: transparent;
+		outline-width: 0px;
+	}
+}
+#inpt_search{
+  background-color: #00000000;
+  border-color: #00000000;
+  outline: none;
+  color: #ffffff;
+  
+}
+.cntr {
+  top: 7px;
+  z-index: 3;
+  position: absolute;
+  right: 10.9%;
+}
+.cntr2 {
+  top: 7px;
+  z-index: 3;
+  position: absolute;
+  right: 10.9%;
+  display: none;
+}
+
 @media screen and (max-width: 900px){
   .nav_container{
     padding: 0;
@@ -152,7 +267,7 @@ body {
     margin-left: 0;
   }
   .nav_items ul{
-    margin-bottom: 119px;
+    margin-bottom: 4.42vh;
     display: flex;
     margin-left: 53px;
     flex-direction: column;
@@ -180,11 +295,46 @@ body {
     display: none;
   }
   .nav_login2 {
-    bottom: -413px;
+    bottom: -44.1vh;
     position: relative;
     width: 13%;
     height: 54px;
-    right: 61%;
+    right: 63%;
     cursor: pointer;
 }
+.cntr{
+  display: none;
+}
+.cntr2 {
+  display: block;
+  top: 16.84vh;
+  left: 45%;
+}
+  .search2 {
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 3px;
+      height: 20px;
+      right: -5px;
+      top: 21px;
+      background: #FFFFFF;
+      border-radius: 3px;
+      transform: rotate(-45deg);
+      transition: all 200ms ease;
+    }
+    
+    &.active,
+    &:hover {
+      width: 300px;
+      margin-left: -130px;
+      margin-top: 3px;
+      &:after {
+        height: 0px;	
+      }
+    }
+    
+
+  }
 }
