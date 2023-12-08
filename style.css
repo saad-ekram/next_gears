@@ -95,7 +95,7 @@ header{
 .nav_logo {
     top: 0vh;
     position: absolute;
-    background-image: url(../img/logo-white-only.png);
+    background-image: url(./img/logo-white-only.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -109,7 +109,7 @@ header{
     transition: opacity 1.3s, transform 1.3s;
 }
   .nav_logo:hover{
-    background-image: url(../img/logo-white.png);
+    background-image: url(./img/logo-white.png);
     opacity: 0.7; /* Reduce opacity on hover */
     transform: scale(1.1);
     transition: opacity 1.3s, transform 1.3s;
