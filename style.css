@@ -359,7 +359,48 @@ header{
   border: solid 2px rgb(0, 0, 0);
   background-color: #ffffff;
 }
-/* SHOP SECTION  */
+/* section 2 */
+.section-2{
+  background-image: url(img/sep09.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;  
+  background-attachment: fixed;
+  background-position: center;
+  border-top: solid 3px #ffffff;
+  border-bottom: solid 3px #ffffff;
+
+  
+}
+.slogan-2 {
+  font-style: none;
+  font-size: 3.5vw;
+  font-weight: 400;
+  position: relative;
+  left: 55vw;
+  display: inline-block;
+}
+.keyboard2 {
+  display: flex;
+  position: absolute;
+  width: 34vw;
+  height: 50vh;
+  left: 10vh;
+  top: 105vh;
+  background-image: url(img/keyboard.webp);
+  background-size: contain;
+  transform: rotate(353deg);
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  transition: 0.5s;
+  overflow: hidden;
+  max-width: 36vw;
+}
+
+.keyboard-hover:hover {
+  transform: scale(1.2); 
+}
+
 .shop{
     margin-top: 2rem;
 }
@@ -488,11 +529,23 @@ border-color: #ffffff;
   .sec1-slogan {
     top: 23vh;
 }
+.keyboard2 {
+  top: 56vh;
+  left:6vh;
+
+}
+
 }
 @media (max-width:1525px){
   .sec1-mouse{
     right: 1%;
   }
+  .keyboard2 {
+    top: 108vh;
+    left:6vh;
+
+  }
+  
 }
 @media (max-width: 1080px){
     .nav{
@@ -585,6 +638,12 @@ border-color: #ffffff;
       left: 15%;
       bottom: 3vh;
     }
+    .keyboard2 {
+      top: 56vh;
+      left:6vh;
+
+    }
+    
 
 }
 
@@ -651,6 +710,9 @@ border-color: #ffffff;
             height: 54px;
             right: 12%;
             cursor: pointer;
+        }
+        .keyboard2 {
+          top: 58vh;
         }
 }
 
@@ -721,4 +783,8 @@ border-color: #ffffff;
             right: 12%;
             cursor: pointer;
         }
+        .keyboard2 {
+          top: 60vh;
+        }
+        
 }
