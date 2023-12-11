@@ -1,0 +1,88 @@
+/* MAIN SECTION  */
+.main {
+    display: flexbox;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/img/sec1main.png);
+    background-size: contain;
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 100%;
+    overflow: hidden;
+  }
+  .section-title{
+    font-style: 1.28vw;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .sec1-slogan {
+    font-size: 4.5vw;
+    position: absolute;
+    top: 20vh;
+    left: 5vw;;
+    position: absolute;
+    top: 20vh;
+    left: 2vw;
+  }
+  .sec1-mouse {
+    display: flex;
+    position: absolute;
+    width: 34vw;
+    height: 50vh;
+    background-image: url(/img/sec1-mouse.webp);
+    background-size: contain;
+    margin: 0px;
+    padding: 0px;
+    right: 4%;
+    top: 31vh;
+    transform: rotate(25deg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+    max-width: 34vw;
+  }
+  
+  .sec1-vfx {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  
+    background-image: url(/img/sec1-mouse2.png);
+    background-size: contain;
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 100%;
+    overflow: hidden;
+  
+  }
+  
+  .sec1-mouse:hover{
+    transform: scale(1.2) rotate(14deg);
+    max-width: 34vw;
+    z-index: 2;
+  }
+  .sec1-btn {
+    position: absolute;
+    font-size: 28px;
+    bottom: 30vh;
+    left: 13%;
+    color: white;
+    border: solid 2px white;
+    border-radius: 29px;
+    padding: 14px;
+    transition: all 0.5s;
+  }
+  .sec1-btn:hover {
+    color: rgb(0, 0, 0);
+    border: solid 2px rgb(0, 0, 0);
+    background-color: #ffffff;
+  }

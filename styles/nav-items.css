@@ -1,0 +1,53 @@
+/* nav ITEMS  */
+
+.nav_items ul{
+    list-style: none;
+  }
+  .nav_items_links{
+    color: white;
+    text-decoration: none;
+  }
+  .container .nav_items {
+    display: flex;
+    align-items: center;
+  }
+  .container .nav_items ul{
+    display: flex;
+  }
+  .container .nav_items ul li{
+    display: flex;
+    margin-left: 20px;
+  }
+  .container .nav_menu{
+    display: none;
+    position: absolute;
+    width: 35px;
+    left: 5%;
+    top: 37%;;
+  }
+  .nav_items {
+    position: absolute;
+    top: 4.3vh;
+    left: 10%;
+}
+  
+  .nav-underline{
+    position: relative;
+  }
+  
+  .nav-underline::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 100%; 
+    width: 0;
+    height: 2px;
+    background-color:white;
+    transition: width 0.3s ease, right 0.3s ease; 
+  }
+  
+  
+  .nav-underline:hover::before {
+    width: 100%;
+    right: 0; 
+  }

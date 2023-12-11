@@ -1,0 +1,42 @@
+/* SECTION 2 */
+.section-2 {
+    display: grid;
+    position: relative;
+    width: 100%;
+    /* height: 55vh; */
+    text-align: center;
+    background-color: black;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    background-position-y: center;
+    grid-template-columns: repeat(auto-fit, minmax(176px, auto));
+      gap: 0.5rem;
+  }
+  .sec_2_card{
+    margin-top: 7vh;
+  }
+  .sec2_card_htext{
+      font-size: 2vh;
+      font-family: 'Roboto', sans-serif;
+      margin-bottom: 15px;
+  }
+  .sec2_card_text{
+    font-size: 1vw;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+  }
+  .card_icon {
+    font-size: 6vw;
+    font-family: 'Roboto', sans-serif;
+  }
+  .sec2_text {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translatex(-50%);
+    margin-top: 3vh;
+    font: caption;
+    font-size: 2.5vw;
+  }

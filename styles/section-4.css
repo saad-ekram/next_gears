@@ -1,0 +1,45 @@
+/* section 4 */
+.section-4{
+    position: relative;
+    background-image: url(img/sep09.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-attachment: fixed;
+    background-position: center;
+    /* border-top: solid 3px #ffffff; */
+    border-bottom: solid 3px #ffffff;
+  
+    
+  }
+  .slogan-4 {
+    font-style: none;
+    font-size: 3vw;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    position: relative;
+    left: 55vw;
+    display: inline-block;
+  }
+  .keyboard4 {
+    display: flex;
+    position: absolute;
+    width: 34vw;
+    height: 50vh;
+    left: 10vh;
+    top: -13vh;
+    background-image: url(/img/keyboard.webp);
+    background-size: contain;
+    transform: rotate(353deg);
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+    max-width: 36vw;
+  }
+  
+  .keyboard-hover:hover {
+    transform: scale(1.2); 
+  }
+  
+  

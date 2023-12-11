@@ -1,0 +1,66 @@
+/* sec 2.5 */
+.section-2-5{
+    display: grid;
+    position: relative;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(293px, auto));
+      gap: 0.5rem;
+  }
+  .sec25card{
+    overflow: hidden;
+    border-radius: 19.5px;
+    height: 35vh;
+    width: 80%;
+      margin-left: 10%;
+  }
+  .card1 {
+    width: 94%;
+  }
+  .card2{
+    width: 90%;
+  }
+  .card3 {
+    width: 94%;
+  }
+  .sec2-5-card {
+    border-radius: 19.5px;
+    height: 40vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -79px;
+    transition: all 1s;
+    cursor: pointer;
+    filter: blur(0px);
+  }
+  .sec25card p {
+    position: relative;
+    font-size: 41px;
+    top: -246px;
+    left: -3px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    COLOR: darkgray;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+  }
+  .sec25card:hover .sec2-5-card{
+    transform: scale(1.2);
+    filter: blur(3px);
+  
+  }
+  .sec25card:hover .text_card{
+    font-weight: 600;
+  }
+  .sec2-5-bg1{
+    background-image: url(/img/plp-tile-pro-x-wireless.webp);
+    background-position-y: -77px;
+  }
+  .sec2-5-bg2 {
+    background-image: url(/img/plp-tile-keyboards-prox.webp);
+    background-position-y: -121px;
+  }
+  .sec2-5-bg3{
+    background-image: url(/img/mouse_cards.webp);
+    background-position-y: -86px;
+  }

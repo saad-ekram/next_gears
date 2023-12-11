@@ -1,0 +1,50 @@
+/* section 3 */
+.section-3 {
+    position: relative;
+    background-image: url(/img/sec3.jpg);
+    background-repeat: no-repeat;
+    background-size: 113%;
+    background-position-y: center;
+    height: 100vh;
+    background-position-x: 29%;
+    border-bottom: solid 0.2vh white;
+  }
+  .sec_3_img {
+    position: absolute;
+    background-image: url(/img/logo-white-only.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 42vh;
+    width: 18%;
+    left: 34.3%;
+    top: 17vh;
+    transition: all 2s;
+  }
+  
+  .sec_3_htext {
+    position: absolute;
+    right: 36%;
+    top: 25.5vh;
+    font-size: 1.44vw;
+    font-weight: 500;
+    font-variant: small-caps;
+    font-family: 'Roboto', sans-serif;
+  }
+  .sec_3_text {
+    position: absolute;
+    right: 32.7vw;  
+    top: 28.5vh;
+    font-size: 1.28vw;
+    font-weight: 500;
+    font-variant: small-caps;
+    font-family: 'Roboto', sans-serif;
+  }
+  .sec3_line {
+    position: absolute;
+    width: 0.3%;
+    height: 19vh;
+    border-radius: 9px;
+    left: 51%;
+    top: 24vh;
+    background-color: #ffffff;
+  }
