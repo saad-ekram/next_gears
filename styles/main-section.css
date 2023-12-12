@@ -4,7 +4,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-image: url(/img/sec1main.png);
+    background-image: url(../img/sec1main.png);
     background-size: contain;
     margin: 0px;
     padding: 0px;
@@ -33,7 +33,7 @@
     position: absolute;
     width: 34vw;
     height: 50vh;
-    background-image: url(/img/sec1-mouse.webp);
+    background-image: url(../img/sec1-mouse.webp);
     background-size: contain;
     margin: 0px;
     padding: 0px;
@@ -54,7 +54,7 @@
     width: 100vw;
     height: 100vh;
   
-    background-image: url(/img/sec1-mouse2.png);
+    background-image: url(../img/sec1-mouse2.png);
     background-size: contain;
     margin: 0px;
     padding: 0px;

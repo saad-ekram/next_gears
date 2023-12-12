@@ -1,7 +1,7 @@
 /* section 4 */
 .section-4{
     position: relative;
-    background-image: url(img/sep09.jpg);
+    background-image: url(../img/sep09.jpg);
     background-repeat: no-repeat;
     background-size: cover;  
     background-attachment: fixed;
@@ -27,7 +27,7 @@
     height: 50vh;
     left: 10vh;
     top: -13vh;
-    background-image: url(/img/keyboard.webp);
+    background-image: url(../img/keyboard.webp);
     background-size: contain;
     transform: rotate(353deg);
     background-repeat: no-repeat;

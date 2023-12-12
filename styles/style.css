@@ -1,13 +1,13 @@
-@import url('/styles/header.css');
-@import url('/styles/nav-items.css');
-@import url('/styles/cart.css');
-@import url('/styles/main-section.css');
-@import url('/styles/sec-2.5.css');
-@import url('/styles/section-2.css');
-@import url('/styles/section-3.css');
-@import url('/styles/section-4.css');
+@import url('header.css');
+@import url('nav-items.css');
+@import url('cart.css');
+@import url('main-section.css');
+@import url('sec-2.5.css');
+@import url('section-2.css');
+@import url('section-3.css');
+@import url('section-4.css');
 
-@import url('/styles/shop-section.css');
+@import url('shop-section.css');
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 

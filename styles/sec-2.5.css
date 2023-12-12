@@ -53,14 +53,14 @@
     font-weight: 600;
   }
   .sec2-5-bg1{
-    background-image: url(/img/plp-tile-pro-x-wireless.webp);
+    background-image: url(../img/plp-tile-pro-x-wireless.webp);
     background-position-y: -77px;
   }
   .sec2-5-bg2 {
-    background-image: url(/img/plp-tile-keyboards-prox.webp);
+    background-image: url(../img/plp-tile-keyboards-prox.webp);
     background-position-y: -121px;
   }
   .sec2-5-bg3{
-    background-image: url(/img/mouse_cards.webp);
+    background-image: url(../img/mouse_cards.webp);
     background-position-y: -86px;
   }
