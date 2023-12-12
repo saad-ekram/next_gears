@@ -189,3 +189,46 @@ function setSuccessFor(input){
   // Empty The Error Message
   targetErrorMessage.innerHTML = '';
 };
+// Assume you have this function to handle form submission
+function submitForm(url, formData) {
+  fetch(url, {
+      method: 'POST',
+      body: formData,
+  })
+  .then(response => response.text())
+  .then(data => {
+      console.log(data);
+      // Handle the response accordingly
+  })
+  .catch(error => console.error('Error:', error));
+}
+
+// Example for login
+document.getElementById('loginSubmitBtn').addEventListener('click', function(event) {
+  event.preventDefault();
+  
+  const username = document.getElementById('loginUsername').value;
+  const password = document.getElementById('loginPassword').value;
+
+  const formData = new FormData();
+  formData.append('username', username);
+  formData.append('password', password);
+
+  submitForm('login.php', formData);
+});
+
+// Example for registration
+document.getElementById('signUpSubmitBtn').addEventListener('click', function(event) {
+  event.preventDefault();
+  
+  const username = document.getElementById('signUpUsername').value;
+  const email = document.getElementById('signUpEmail').value;
+  const password = document.getElementById('signUpPassword').value;
+
+  const formData = new FormData();
+  formData.append('username', username);
+  formData.append('email', email);
+  formData.append('password', password);
+
+  submitForm('register.php', formData);
+});

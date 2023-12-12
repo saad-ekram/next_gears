@@ -1,0 +1,462 @@
+@import url('/styles/header.css');
+@import url('/styles/nav-items.css');
+@import url('/styles/cart.css');
+@import url('/styles/main-section.css');
+@import url('/styles/sec-2.5.css');
+@import url('/styles/section-2.css');
+@import url('/styles/section-3.css');
+@import url('/styles/section-4.css');
+@import url('/styles/shop-section.css');
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Globals  */
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding: 2rem;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255); 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; }
+/* Variables  */
+:root{
+    --main-color: #ffffff;
+    --sec-color: #ffffff;
+    --text-color: #ffffff;
+    --bg-color: #000000;
+}
+::selection{
+    color: var(--text-color);
+    background-color: var(--main-color);
+}
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+section{
+    padding: 4rem 0 3rem;
+}
+body{
+    background-color: #000000;
+    color: var(--text-color);
+    height: 5000px;
+    /* background-image: url(img/background.jpg); */
+}
+img{
+    width: 100%;
+}
+/* SHOP SECTION  */
+
+/* footer SECTION  */
+
+
+/* ================ RESPONSIVE & BREAKPOINTS ============= */
+@media screen and (min-width: 1124px) and (max-width: 1124px) {
+
+}
+
+
+@media (max-width:1400px){
+  .sec1-slogan {
+    top: 23vh;
+}
+.keyboard4 {
+  top: 56vh;
+  left:6vh;
+
+}
+
+}
+@media (max-width:1525px){
+  .sec1-mouse{
+    right: 1%;
+  }
+  .keyboard4 {
+    height: 34vh;
+    top: -9vh;
+    left: 8vh;
+}
+  
+}
+@media (max-width: 1080px){
+    .nav{
+        padding: 15px;
+    }
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    section{
+        padding: 3rem 0 2rem;
+    }
+    .shop{
+        margin-top: 2rem;
+    }
+    .nav_logo {
+        top: 0.33vh;
+        left: 41%;
+        width: 18%;
+    }
+    .container{
+        padding: 0;
+      }
+      .container .nav_menu{
+        display: block;
+      }
+      .nav_items {
+        border-radius: 17px 0px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 102%;
+        height: 62vh;
+        top: 10.9vh;
+        left: -21%;
+        background-color: rgb(0 0 0 / 69%);
+        backdrop-filter: blur(10px);
+        margin-left: -103%;
+        border-bottom: 2px solid white;
+        border-right: 2px solid white;
+        transition: all 0.5s ease;
+    }
+      .nav_items.mobile-menu{
+        margin-left: 0;
+      }
+      .nav_items ul{
+        margin-bottom: 4.42vh;
+        display: flex;
+        margin-left: 23.34vw;
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav_items ul li{
+        margin-right: 20px;
+        margin-top: 90px;
+        font-size: 20px;
+      }
+
+      #cart-icon {
+        top: 4.1vh;
+        position: absolute;
+        left:87.5%;
+        font-size: 2.4em;
+        cursor: pointer;
+    }
+
+
+          .nav_login {
+            top: 3.7vh;
+            position: absolute;
+            width: 37px;
+            height: 54px;
+            right: 12%;
+            cursor: pointer;
+        }
+        .main{
+          height: 50vh;
+        }
+        .sec1-slogan {
+          font-size: 4.5vw;
+          left: 11%;
+          top: 14vh;
+      }
+
+      .sec1-mouse {
+        height: 15vh;
+        top: 19vh;
+        right: 1%;
+    }
+    .sec2_text{
+      font-size: 3.5vw;
+    }
+    .keyboard4 {
+      height: 12vh;
+      top: -2.7vh;
+      left:6vh;
+
+    }
+    .section-3 {
+      height: 35vh;
+  }
+    .sec_3_img {
+      top: 0vh;
+      left: 30%;
+  }
+  .sec1-btn {
+    left: 15%;
+    bottom: 9vh;
+    font-size: 20px;
+}
+
+.sec2_card_htext {
+  font-size: 2vh;
+}
+.sec2_card_text {
+  font-size: 2vh;
+}
+
+.card_icon {
+  font-size: 25vw;
+}
+
+}
+
+@media(max-width: 750px){
+  
+}
+@media (max-width: 600px){
+  .sec_3_img {
+    top: 8vh;
+    left: 14vh;
+    
+}
+.sec1-btn{
+  left: 15%;
+  bottom: 3vh;
+  font-size: 20px;
+}
+}
+@media only screen and (max-width: 1024px) and (min-width:1024px){
+
+  .main {
+    height: 100vh;
+}
+.sec1-slogan {
+  text-align: left;
+  font-size: 5.5vw;
+  left: 6%;
+  top: 20vh;
+}
+.sec1-mouse {
+  top: 32vh;
+  right: 1%;
+}
+.sec1-btn {
+  left: 18%;
+  bottom: 24vh;
+  font-size: 21px;
+}
+#cart-icon {
+  top: 2vh;
+  left: 93%;
+}
+.nav_logo{
+  top: -3vh;
+}
+.container .nav_items ul li {
+  font-size: 26px;
+  margin-top: 50px;
+}
+.nav_menu{}
+.nav_login {
+  top: 1.5vh;
+  left: 87%;
+}
+.sec2_text {
+  top: 4vh;
+}
+.section-3 {
+  height: 100vh;
+}
+.sec_3_img {
+  top: 16vh;
+  left: 33.2%;
+}
+.keyboard4 {
+  top: -10vh;
+  width: 50vh;
+}
+.slogan-4{}
+.keyboard4:hover{
+  top: -6.5vh;
+}
+}
+/* For Medium Devices */
+@media (max-width: 400px){
+    .nav{
+        padding: 11px;
+    }
+    .nav_logo {
+        top: -0.33vh;
+        left: 41%;
+        width: 18%;
+    }
+    .container{
+        padding: 0;
+      }
+      .container .nav_menu{
+        display: block;
+      }
+      .nav_items {
+        border-radius: 17px 0px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 102%;
+        height: 62vh;
+        top: 10.9vh;
+        left: -21%;
+        background-color: rgb(0 0 0 / 69%);
+        backdrop-filter: blur(10px);
+        margin-left: -103%;
+        border-bottom: 2px solid white;
+        border-right: 2px solid white;
+        transition: all 0.5s ease;
+    }
+      .nav_items.mobile-menu{
+        margin-left: 0;
+      }
+      .nav_items ul{
+        margin-bottom: 4.42vh;
+        display: flex;
+        margin-left: 23.34vw;
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav_items ul li {
+        margin-right: 20px;
+        margin-top: 73px;
+        font-size: 20px;
+    }
+
+      #cart-icon {
+        top: 4.1vh;
+        position: absolute;
+        left: 86.5%;
+        font-size: 2.4em;
+        cursor: pointer;
+    }
+
+          .nav_login {
+            top: 3.7vh;
+            position: absolute;
+            width: 37px;
+            height: 54px;
+            right: 12%;
+            cursor: pointer;
+        }
+        .main {
+         background-size: cover;
+      }
+        
+
+        .sec1-mouse {
+          width: 43vh;
+          height: 25vh;
+          right: -4%;
+          top: 19vh;
+          max-width: 55vw;
+      }
+      .sec1-mouse:hover{
+        max-width: 61vw;
+      }
+        .keyboard4 {
+          top: -3.5vh;
+        }
+        .keyboard-hover:hover {
+          transform: scale(1.2); 
+        }
+        .sec1-btn{
+          left: 15%;
+          bottom: 8vh;
+          font-size: 10px;
+        }
+        .sec_2_card {
+          max-width: calc(25% - 1em);
+      }
+}
+
+/* For Small Devices */
+@media (max-width: 360px){
+    .shop{
+        margin-top: 1rem;
+    }
+    .cart{
+        width: 280px;
+    }
+    .nav_logo {
+        top: 0.33vh;
+        left: 41%;
+        width: 18%;
+    }
+    .container{
+        padding: 0;
+      }
+      .container .nav_menu{
+        display: block;
+      }
+      .nav_items {
+        border-radius: 17px 0px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 102%;
+        height: 62vh;
+        top: 10.9vh;
+        left: -21%;
+        background-color: rgb(0 0 0 / 69%);
+        backdrop-filter: blur(10px);
+        margin-left: -103%;
+        border-bottom: 2px solid white;
+        border-right: 2px solid white;
+        transition: all 0.5s ease;
+    }
+      .nav_items.mobile-menu{
+        margin-left: 0;
+      }
+      .nav_items ul{
+        margin-bottom: 4.42vh;
+        display: flex;
+        margin-left: 23.34vw;
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav_items ul li {
+        margin-right: 20px;
+        margin-top: 73px;
+        font-size: 20px;
+    }
+
+      #cart-icon {
+        top: 4.1vh;
+        position: absolute;
+        left: 86.5%;
+        font-size: 2.4em;
+        cursor: pointer;
+    }
+
+          .nav_login {
+            top: 3.7vh;
+            position: absolute;
+            width: 37px;
+            height: 54px;
+            right: 12%;
+            cursor: pointer;
+        }
+        .keyboard4 {
+          top: -2.5vh;
+        }
+        
+}
