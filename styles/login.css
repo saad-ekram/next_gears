@@ -11,19 +11,32 @@
   scroll-padding: 2rem;
 }
 body{
-  background-image: url(../img/login.jpg);
+  background-image: url(../img/register.jpg);
   background-size: 100%;
   height: 100vh;
   background-repeat: no-repeat;
 }
 .login {
   position: absolute;
-  left: 32%;
-  top: 20vh;
-  width: 40%;
-  height: 73vh;
+  left: 30%;
+  top: 21vh;
+  width: 38%;
+  height: 63vh;
+  border: solid gray;
   border-radius: 15px;
   backdrop-filter: blur(11px);
+  background-color: transparent;
+}
+h1 {
+  position: absolute;
+  right: 10vw;
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 }
 .form-group {
   position: absolute;
@@ -33,26 +46,32 @@ body{
   /* width: 20%; */
 }
 .email {
-  TOP: 53VH;
-  LEFT: 37%;
+    TOP: 53VH;
+    LEFT: 37.5%;
 }
 .pass {
-  TOP: 67VH;
-  LEFT: 34%;
+  TOP: 64VH;
+  LEFT: 42.5%;
 }
 .name {
-  LEFT: 36.5%;
+  LEFT: 42.5%;
 }
 .email input{
-  font-size: 42px;
+  position: relative;
+  font-size: 26px;
   background-color: transparent;
   border-color: black;
   border-radius: 15px;
   font-family: 'Roboto', sans-serif;
   color: white;
+  bottom: 0.5vh;
+  left: -1vh;
+  left: 5vw;
+
 }
 .pass input{
-  font-size: 42px;
+  position: relative;
+  font-size: 26px;
   background-color: transparent;
   border-color: black;
   border-radius: 15px;
@@ -60,34 +79,45 @@ body{
   color: white;
 }
 .name input {
-  font-size: 42px;
+  position: relative;
+  font-size: 26px;
   background-color: transparent;
   border-color: black;
   border-radius: 15px;
   font-family: 'Roboto', sans-serif;
   color: white;
 }
+
 .email label{
-  font-size: 33px;
+  position: absolute;
+  font-size: 26px;
   font-family: 'Roboto', sans-serif;
   padding-right: 15px;
+  bottom: 4vh;
+  left: 10vh;
 }
 .pass label{
-  font-size: 33px;
+  position: absolute;
+  font-size: 26px;
   font-family: 'Roboto', sans-serif;
   padding-right: 15px;
+  bottom: 4vh;
 }
 .name label {
-  font-size: 33px;
+  position: absolute;
+  font-size: 26px;
   font-family: 'Roboto', sans-serif;
   padding-right: 15px;
+  bottom: 4vh;
+  left: 4px;
+
 }
 .btn {
   POSITION: absolute;
-  TOP: 81VH;
-  LEFT: 45%;
-  PADDING: 6PX 73PX;
-  FONT-SIZE: 31PX;
+  TOP: 73vh;
+  LEFT: 46%;
+  PADDING: 7PX 41PX;
+  FONT-SIZE: 14px;
   BACKGROUND-COLOR: TRANSPARENT;
   COLOR: WHITE;
   BORDER-COLOR: WHITE;
