@@ -1,126 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html>
+  <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/login.css"/>
     <title>next gears</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Secular+One&display=swap" rel="stylesheet">
+    <!-- box icons  -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- styles  -->
     <link rel="icon" type="image/x-icon" href="img/logo1.png">
-    <link rel="stylesheet" href="styles/login.css">
-</head>
-<body>
-    <div class="wrapper__area" id="wrapper_Area">
-        <!-- Forms Area -->
-        <div class="forms__area">
-          <!-- Login Form -->
-          <form class="login__form" id="loginForm">
-            <!-- Form Title -->
-            <h1 class="form__title">Sign In!</h1>
-            <!-- inputs Groups -->
-            <div class="input__group">
-              <label class="field">
-                <input type="text" name="username" placeholder="Username" id="loginUsername">
-              </label>
-              <span class="input__icon"><i class="bx bx-user"></i></span>
-              <small class="input__error_message"></small>
-            </div>
-            <div class="input__group">
-              <label class="field">
-                <input type="password" name="password" placeholder="Password" id="loginPassword">
-              </label>
-              <span class="input__icon"><i class="bx bx-lock"></i></span>
-              <span class="showHide__Icon"><i class="bx bx-hide"></i></span>
-              <small class="input__error_message"></small>
-            </div>
-            <div class="form__actions">
-              <label for="checkboxInput" class="remeber_me">
-                <input type="checkbox" id="checkboxInput">
-                <span class="checkmark"></span>
-                <span>Remeber Me</span>
-              </label>
-              <div class="forgot_password">Forgot Password?</div>
-            </div>
-            <!-- Login Button -->
-            <button type="submit" class="submit-button" id="loginSubmitBtn">Sign in</button>
-            <!-- Alternate Login -->
-            <div class="alternate-login">
-              <div class="link">
-                <i class='bx bxl-google'></i>
-                <span>Google</span>
-              </div>
-              <div class="link">
-                <i class='bx bxl-facebook-circle'></i>
-                <span>Facebook</span>
-              </div>
-            </div>
-          </form> <!-- End Login Form -->
-      
-          <!-- Sign Up Form -->
-          <form class="sign-up__form" id="signUpForm">
-            <!-- Form Title -->
-            <h1 class="form__title">Sign Up!</h1>
-            <!-- inputs Groups -->
-            <div class="input__group">
-              <label class="field">
-                <input type="text" name="username" placeholder="Username123..." id="signUpUsername">
-              </label>
-              <span class="input__icon"><i class="bx bx-user"></i></span>
-              <small class="input__error_message"></small>
-            </div>
-            <div class="input__group">
-              <label class="field">
-                <input type="text" name="email" placeholder="Email@example.com" id="signUpEmail">
-              </label>
-              <span class="input__icon"><i class="bx bx-at"></i></span>
-              <small class="input__error_message"></small>
-            </div>
-            <div class="input__group">
-              <label class="field">
-                <input type="password" name="password" placeholder="Password123$#%&..." id="signUpPassword">
-              </label>
-              <span class="input__icon"><i class="bx bx-lock"></i></span>
-              <span class="showHide__Icon"><i class="bx bx-hide"></i></span>
-              <small class="input__error_message"></small>
-            </div>
-            <div class="input__group confirm__group">
-              <label class="field">
-                <input type="password" name="confirm_password" placeholder="Confirm Password" id="signUpConfirmPassword">
-              </label>
-              <span class="input__icon"><i class="bx bx-lock"></i></span>
-              <span class="showHide__Icon"><i class="bx bx-hide"></i></span>
-              <small class="input__error_message"></small>
-            </div>
-            <!-- Sign Up Button -->
-            <button type="submit" class="submit-button" id="signUpSubmitBtn">Sign Up</button>
-            <!-- Alternate Login -->
-            <div class="alternate-login">
-              <div class="link">
-                <i class='bx bxl-google'></i>
-                <span>Google</span>
-              </div>
-              <div class="link">
-                <i class='bx bxl-facebook-circle'></i>
-                <span>Facebook</span>
-              </div>
-            </div>
-          </form> <!-- End Sign Up Form -->
-        </div><!-- End Forms Area -->
-      
-        <!-- Aside Area -->
-        <div class="aside__area" id="aside_Area">
-          <div class="login__aside-info">
-            <h4>Hello</h4>
-            <img src="https://d.top4top.io/p_1945xjz2y1.png" alt="Image">
-            <p>Enter your personal details and start journey with us</p>
-            <button id="aside_signUp_Btn">Sign Up</button>
+  </head>
+  <body>
+    <header>
+      <!-- NAV  -->
+      <div class="nav container">
+          <div class="nav_logo"></div>
+          <!-- CART ICON  -->
+          <i class='bx bx-shopping-bag' id="cart-icon"></i>
+          <!-- NAV ITEMS  -->
+          <div class="nav_items">
+              <ul>
+                  <li class="nav-underline"><a href="#PRODUCTS" class="nav_items_links active" >PRODUCTS</a></li>
+                  <li class="nav-underline"><a  href="#SOFTWARE" class="nav_items_links active"  >SOFTWARE</a></li>
+                  <li class="nav-underline"><a  href="#COMMUNITY" class="nav_items_links active" >COMMUNITY</a></li>
+                  <li class="nav-underline"><a  href="#SUPPORT" class="nav_items_links active" >SUPPORT</a></li>
+              </ul>
+
           </div>
-          <div class="sign-up__aside-info">
-            <h4>Welcome</h4>
-            <img src="https://e.top4top.io/p_1945sidbp2.png" alt="Image">
-            <p>To Keep connected with us please login with your personal info</p>
-            <button id="aside_signIn_Btn">Sign In</button>
+          <img src="./img/nav_bars1.png" alt="" class="nav_menu">
+
+           <!-- LOGIN1  -->
+           <a href="login.html" class="nav_login"><script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/hrjifpbq.json"
+                  trigger="hover"
+                  colors="primary:#ffffff"
+                  style="width:100%;height:50px">
+              </lord-icon></a>    
+          <!-- CART  -->
+          <div class="cart">
+              <h2 class="cart-title">Your Cart</h2>
+
+              <!-- CONTENT  -->
+              <div class="cart-content">
+
+
+              </div>
+
+              <!-- TOTAL   -->
+              <div class="total">
+                  <div class="total-title">Total</div>
+                  <div class="total-price">$0</div>
+              </div>
+              <!-- BUY BUTTON  -->
+              <button type="button" class="btn-buy">Buy Now</button>
+              <!-- CART CLOSE  -->
+              <i class='bx bx-x' id="cart-close"></i>
           </div>
-        </div>
       </div>
-      <script src="js/login.js"></script>
-</body>
+  </header>
+    <div class="container login">
+            <h1>Registration Form</h1>
+          </div>
+
+            <form method="post" action="php/login.php">
+              <div class="form-group name">
+                <label for="name" method="get">NAME</label>
+                <input
+                  type="input"
+                  class="form-control"
+                  id="password"
+                  name="username"
+                />
+              </div>
+              </div>
+              <div class="form-group email">
+                <label for="email" method="get">Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                />
+              </div>
+              <div class="form-group pass">
+                <label for="password" method="get">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                />
+              </div>
+            
+              <input type="submit" class="btn btn-primary" />
+            </form>
+       
+<script src="js/login.js"></script>
+  </body>
 </html>

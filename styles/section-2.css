@@ -12,7 +12,8 @@
     justify-content: center;
     background-position-y: center;
     grid-template-columns: repeat(auto-fit, minmax(176px, auto));
-      gap: 0.5rem;
+    gap: 0.5rem;
+    border-bottom: solid 0.2vh white;
   }
   .sec_2_card{
     margin-top: 7vh;

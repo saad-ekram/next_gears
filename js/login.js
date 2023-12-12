@@ -1,234 +1,164 @@
-// Wrapper Area
-const wrapper__Area = document.querySelector('#wrapper_Area');
+// OPEN & CLOSE CART
+const cartIcon = document.querySelector("#cart-icon");
+const cart = document.querySelector(".cart");
+const closeCart = document.querySelector("#cart-close");
 
-// Login & Sing-Up Forms
-const loginForm = document.querySelector('#loginForm');
-const signUpForm = document.querySelector('#signUpForm');
-
-// All Login And Sing-Up Forms Inputs 
-const allLoginFormFields = Array.from(document.querySelectorAll('#loginForm .input__group .field input'));
-const allSignUpFormFields = Array.from(document.querySelectorAll('#signUpForm .input__group:not(.confirm__group) .field input'));
-
-// Password And Confirm Password Fileds
-const passwordField = document.querySelector('#signUpPassword');
-const confirmPassword = document.querySelector('#signUpConfirmPassword');
-
-// Login % Sign-Up Submit Buttons
-const loginFormSubmitBtn = document.querySelector('#loginSubmitBtn');
-const signUpFormSubmitBtn = document.querySelector('#signUpSubmitBtn');
-
-// Show Hide Password Element
-const showHidePassDom = Array.from(document.querySelectorAll('.showHide__Icon i'));
-
-// Pattrens Regex
-const patterns = { // All This Regex Code Is For Demo You Can Add Your Own Regex Code :)
-  username: /^[a-z]+\d?/,
-  email: /^[^\W\d\.-_]+\w\d?@[a-z0-9]+\.([a-z0-9]{2,6})(\.[a-z0-9]{2,6})?$/,
-  password: /^[^\d\W]\w+\d?\W?\w?/i,
-};
-
-// Aside Area
-const aside__Area = document.querySelector('#aside_Area');
-
-// Aside Sing-Up & Sign In Buttons
-const aside__SignUp_Button = document.querySelector('#aside_signUp_Btn');
-const aside__SignIn_Button = document.querySelector('#aside_signIn_Btn');
-
-// - - - - -  Events - - - - - //
-
-// When Submitting On Login & Sign-Up Forms
-loginForm.addEventListener('submit', (e) => {
-  // Stop Form Submission
-  e.preventDefault();
-  // Call Login Form Validation Function
-  loginFormValidation();
-});
-signUpForm.addEventListener('submit', (e) => {
-  // Stop Form Submission
-  e.preventDefault();
-  // Call Sign-Up Form Validation Function
-  signUpFormValidation();
+cartIcon.addEventListener("click", () => {
+  cart.classList.add("active");
 });
 
-// Every Time Click On Aside Sign-Up & Sing-In Buttons. Call Function Chnage Form Mode
-aside__Area.addEventListener('click', chnageFormMode);
-aside__Area.addEventListener('click', chnageFormMode);
+closeCart.addEventListener("click", () => {
+  cart.classList.remove("active");
+});
 
-// - - - - -  Functions - - - - - //
-
-// Change Form Mode Function
-function chnageFormMode(e) {
-  // Check. If The Target Element Is Aside Sign-Up Button
-  if(e.target === aside__SignUp_Button){
-    // Add Class [ Sign Up Mode Active ] On Wrapper Area
-    wrapper__Area.classList.add('sign-up__Mode-active');
-  };
-  // Check. If The Target Element Is Aside Sign-In Button
-  if(e.target === aside__SignIn_Button){
-    // Remove Class [ Sign Up Mode Active ] From Wrapper Area
-    wrapper__Area.classList.remove('sign-up__Mode-active');
-  };
-};
-
-// Function Show Hide Password
-(function showHidePass() {
-  // Loop On All The Show Hide Password Icon
-  showHidePassDom.forEach(icon =>{
-    // When Click On Any Show Hide Icon...
-    icon.addEventListener('click', () => {
-      // Select The Target Password Input
-      const targetAreaInput = icon.parentElement.parentElement.querySelector('.field input');
-      // If The Target Icon Has Hide-icon
-      if(icon.className === 'bx bx-hide'){
-        // Change The Target Icon Class
-        icon.className = 'bx bx-show';
-        // Change The Target Input Area Type
-        targetAreaInput.setAttribute('type', 'text');
-      }else{ // else
-        // Change The Target Icon Class
-        icon.className = 'bx bx-hide';
-        // Change The Target Input Area Type
-        targetAreaInput.setAttribute('type', 'password');
-      };
-    });
-  });
-})();
-
-// Login Form Validation Function
-function loginFormValidation() {
-  // Loop On All The Inputs
-  allLoginFormFields.forEach(input => {
-    // Input Targte Field Name Value
-    const inputAttribueValueName = input.attributes.name.value;
-    // Input Value Without Spaces
-    const inputValue = input.value.trim();
-    // Input Regex Validation Response [ True || False ] :)
-    const inputRegex = patterns[inputAttribueValueName].test(inputValue);
-
-    // Check If The Input Value Is Empty
-    if(inputValue === ''){
-      // Call Function Set Error For
-      setErrorFor(input, `${inputAttribueValueName} is required. Please enter your response.`);
-    }else if(inputRegex === false){ // Else If: If The InputRegext Response Is False
-      // Call Function Set Error For
-      setErrorFor(input, `${inputAttribueValueName} Is Invalid .`);
-    }else{ // Else
-      // Call Function Set Success For
-      setSuccessFor(input);
-    };
-  });
-};
-
-// Sign-Up Form Validation Function
-function signUpFormValidation() {
-  // Loop On All The Inputs
-  allSignUpFormFields.forEach(input => {
-    // Password And Confirm Password Fileds Values Without Spaces
-    const passwordFieldValue = passwordField.value.trim();
-    const conifrmPassValue = confirmPassword.value.trim();
-    // Input Targte Field Name Value
-    const inputAttribueValueName = input.attributes.name.value;
-    // Input Value Without Spaces
-    const inputValue = input.value.trim();
-    // Input Regex Validation Response [ True || False ] :)
-    const inputRegex = patterns[inputAttribueValueName].test(inputValue);
-
-    // Check If The Input Value Is Empty
-    if(inputValue === ''){
-      // Call Function Set Error For
-      setErrorFor(input, `${inputAttribueValueName} is required. Please enter your response.`);
-    }else if(inputRegex === false){ // Else If: If The InputRegext Response Is False
-      // Call Function Set Error For
-      setErrorFor(input, `${inputAttribueValueName} Is Invalid .`);
-    }else{ // Else
-      // Call Function Set Success For
-      setSuccessFor(input);
-    };
-
-    // Validation The Confirm Password
-    if(conifrmPassValue === ''){ // Check If The Confirm Password Value Is Empty
-      // Call Function Set Error For
-      setErrorFor(confirmPassword, `Confirm password is required. Please enter your response.`);
-    }else if(conifrmPassValue !== passwordFieldValue){ // Check If The Confirm Password Value Is Dose Not Match The Password Filed
-      // Call Function Set Error For
-      setErrorFor(confirmPassword, `Confirm password does not match`);
-    }else{ // Eles
-      // Call Function Set Success For
-      setSuccessFor(confirmPassword);
-    };
-
-  });
-};
-
-// Set Error For Function
-function setErrorFor(input, message){
-  // Select The Target Parent Target Input Group
-  const targetParentInput = input.parentElement.parentElement;
-  // Select The Target Input Error Message
-  const targetErrorMessage = targetParentInput.querySelector('.input__error_message');
-
-  // Remove Class FormSucess From The Parent Target
-  targetParentInput.classList.remove('formSuccess');
-  // Add Class Success On Target ParentElement
-  targetParentInput.classList.add('formError');
-  // Set The Message Inside The Target Error Message
-  targetErrorMessage.innerHTML = message;
-};
-
-// Set Success For Function
-function setSuccessFor(input){
-  // Select The Target Parent Target Input Group
-  const targetParentInput = input.parentElement.parentElement;
-  // Select The Target Input Error Message
-  const targetErrorMessage = targetParentInput.querySelector('.input__error_message');
-
-  // Remove Class FormError From The Parent Target
-  targetParentInput.classList.remove('formError');
-  // Add Class Success On Target ParentElement
-  targetParentInput.classList.add('formSuccess');
-  // Empty The Error Message
-  targetErrorMessage.innerHTML = '';
-};
-// Assume you have this function to handle form submission
-function submitForm(url, formData) {
-  fetch(url, {
-      method: 'POST',
-      body: formData,
-  })
-  .then(response => response.text())
-  .then(data => {
-      console.log(data);
-      // Handle the response accordingly
-  })
-  .catch(error => console.error('Error:', error));
+// Start when the document is ready
+if (document.readyState == "loading") {
+  document.addEventListener("DOMContentLoaded", start);
+} else {
+  start();
 }
 
-// Example for login
-document.getElementById('loginSubmitBtn').addEventListener('click', function(event) {
-  event.preventDefault();
-  
-  const username = document.getElementById('loginUsername').value;
-  const password = document.getElementById('loginPassword').value;
+// =============== START ====================
+function start() {
+  addEvents();
+}
 
-  const formData = new FormData();
-  formData.append('username', username);
-  formData.append('password', password);
+// ============= UPDATE & RERENDER ===========
+function update() {
+  addEvents();
+  updateTotal();
+}
 
-  submitForm('login.php', formData);
-});
+// =============== ADD EVENTS ===============
+function addEvents() {
+  // Remove items from cart
+  let cartRemove_btns = document.querySelectorAll(".cart-remove");
+  console.log(cartRemove_btns);
+  cartRemove_btns.forEach((btn) => {
+    btn.addEventListener("click", handle_removeCartItem);
+  });
 
-// Example for registration
-document.getElementById('signUpSubmitBtn').addEventListener('click', function(event) {
-  event.preventDefault();
-  
-  const username = document.getElementById('signUpUsername').value;
-  const email = document.getElementById('signUpEmail').value;
-  const password = document.getElementById('signUpPassword').value;
+  // Change item quantity
+  let cartQuantity_inputs = document.querySelectorAll(".cart-quantity");
+  cartQuantity_inputs.forEach((input) => {
+    input.addEventListener("change", handle_changeItemQuantity);
+  });
 
-  const formData = new FormData();
-  formData.append('username', username);
-  formData.append('email', email);
-  formData.append('password', password);
+  // Add item to cart
+  let addCart_btns = document.querySelectorAll(".add-cart");
+  addCart_btns.forEach((btn) => {
+    btn.addEventListener("click", handle_addCartItem);
+  });
 
-  submitForm('register.php', formData);
-});
+  // Buy Order
+  const buy_btn = document.querySelector(".btn-buy");
+  buy_btn.addEventListener("click", handle_buyOrder);
+}
+
+// ============= HANDLE EVENTS FUNCTIONS =============
+let itemsAdded = [];
+
+function handle_addCartItem() {
+  let product = this.parentElement;
+  let title = product.querySelector(".product-title").innerHTML;
+  let price = product.querySelector(".product-price").innerHTML;
+  let imgSrc = product.querySelector(".product-img").src;
+  console.log(title, price, imgSrc);
+
+  let newToAdd = {
+    title,
+    price,
+    imgSrc,
+  };
+
+  // handle item is already exist
+  if (itemsAdded.find((el) => el.title == newToAdd.title)) {
+    alert("This Item Is Already Exist!");
+    return;
+  } else {
+    itemsAdded.push(newToAdd);
+  }
+
+  // Add product to cart
+  let cartBoxElement = CartBoxComponent(title, price, imgSrc);
+  let newNode = document.createElement("div");
+  newNode.innerHTML = cartBoxElement;
+  const cartContent = cart.querySelector(".cart-content");
+  cartContent.appendChild(newNode);
+
+  update();
+}
+
+function handle_removeCartItem() {
+  this.parentElement.remove();
+  itemsAdded = itemsAdded.filter(
+    (el) =>
+      el.title !=
+      this.parentElement.querySelector(".cart-product-title").innerHTML
+  );
+
+  update();
+}
+
+function handle_changeItemQuantity() {
+  if (isNaN(this.value) || this.value < 1) {
+    this.value = 1;
+  }
+  this.value = Math.floor(this.value); // to keep it integer
+
+  update();
+}
+
+function handle_buyOrder() {
+  if (itemsAdded.length <= 0) {
+    alert("There is No Order to Place Yet! \nPlease Make an Order first.");
+    return;
+  }
+  const cartContent = cart.querySelector(".cart-content");
+  cartContent.innerHTML = "";
+  alert("Your Order is Placed Successfully :)");
+  itemsAdded = [];
+
+  update();
+}
+
+// =========== UPDATE & RERENDER FUNCTIONS =========
+function updateTotal() {
+  let cartBoxes = document.querySelectorAll(".cart-box");
+  const totalElement = cart.querySelector(".total-price");
+  let total = 0;
+  cartBoxes.forEach((cartBox) => {
+    let priceElement = cartBox.querySelector(".cart-price");
+    let price = parseFloat(priceElement.innerHTML.replace("$", ""));
+    let quantity = cartBox.querySelector(".cart-quantity").value;
+    total += price * quantity;
+  });
+
+  // keep 2 digits after the decimal point
+  total = total.toFixed(2);
+  // or you can use also
+  // total = Math.round(total * 100) / 100;
+
+  totalElement.innerHTML = "$" + total;
+}
+
+// ============= HTML COMPONENTS =============
+function CartBoxComponent(title, price, imgSrc) {
+  return `
+    <div class="cart-box">
+        <img src=${imgSrc} alt="" class="cart-img">
+        <div class="detail-box">
+            <div class="cart-product-title">${title}</div>
+            <div class="cart-price">${price}</div>
+            <input type="number" value="1" class="cart-quantity">
+        </div>
+        <!-- REMOVE CART  -->
+        <i class='bx bxs-trash-alt cart-remove'></i>
+    </div>`;
+}
+const menuHamburger = document.querySelector(".nav_menu")
+        const navLinks = document.querySelector(".nav_items")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })

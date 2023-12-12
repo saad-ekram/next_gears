@@ -19,24 +19,25 @@
     position: relative;
     left: 55vw;
     display: inline-block;
-  }
-  .keyboard4 {
-    display: flex;
-    position: absolute;
-    width: 34vw;
-    height: 50vh;
-    left: 10vh;
-    top: -13vh;
-    background-image: url(../img/keyboard.webp);
-    background-size: contain;
-    transform: rotate(353deg);
-    background-repeat: no-repeat;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    transition: 0.5s;
-    overflow: hidden;
-    max-width: 36vw;
-  }
+    padding: 50px;
+}
+.keyboard4 {
+  display: flex;
+  position: absolute;
+  width: 34vw;
+  height: 49vh;
+  left: 10vh;
+  top: -8vh;
+  background-image: url(../img/keyboard.webp);
+  background-size: contain;
+  transform: rotate(353deg);
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  transition: 0.5s;
+  overflow: hidden;
+  max-width: 36vw;
+}
   
   .keyboard-hover:hover {
     transform: scale(1.2); 
